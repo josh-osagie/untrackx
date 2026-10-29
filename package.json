@@ -6,14 +6,24 @@
   "scripts": {
     "dev": "vite",
     "build": "node build.js",
+    "package": "pnpm build && node scripts/pack.js",
+    "icons": "node scripts/generate-icons.js",
     "test": "vitest run"
   },
-  "keywords": ["twitter", "x", "privacy", "tracking", "chrome-extension"],
+  "keywords": [
+    "twitter",
+    "x",
+    "privacy",
+    "tracking",
+    "chrome-extension"
+  ],
   "author": "",
   "license": "MIT",
   "packageManager": "pnpm@10.24.0",
   "devDependencies": {
+    "@types/archiver": "^8.0.0",
     "@types/chrome": "0.3.7",
+    "archiver": "^8.0.0",
     "esbuild": "0.27.4",
     "typescript": "7.0.2",
     "vite": "8.3.5",
