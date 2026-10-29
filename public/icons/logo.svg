@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+  <defs>
+    <!-- Outer Shield Border Gradient -->
+    <linearGradient id="shieldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+
+    <!-- Shield Background Gradient -->
+    <linearGradient id="shieldBg" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Emerald-to-Cyan Privacy Slash Gradient -->
+    <linearGradient id="cleanBlade" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Glow Effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0284c7" flood-opacity="0.4" />
+    </filter>
+
+    <filter id="bladeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#10b981" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <!-- 1. Privacy Shield Base -->
+  <path
+    d="M 64 10
+       C 88 10 108 17 114 26
+       C 114 68 96 99 64 118
+       C 32 99 14 68 14 26
+       C 20 17 40 10 64 10 Z"
+    fill="url(#shieldBg)"
+    stroke="url(#shieldBorder)"
+    stroke-width="5"
+    stroke-linejoin="round"
+    filter="url(#glow)"
+  />
+
+  <!-- Inner Subtle Accent Line -->
+  <path
+    d="M 64 19
+       C 84 19 99 25 104 32
+       C 104 66 90 91 64 107
+       C 38 91 24 66 24 32
+       C 29 25 44 19 64 19 Z"
+    stroke="#1e293b"
+    stroke-width="1.5"
+    opacity="0.8"
+  />
+
+  <!-- 2. Stylized X Emblem -->
+  <g id="x-emblem">
+    <!-- Left-to-Right Main Stem (White) -->
+    <!-- Top section of stem -->
+    <path
+      d="M 37 36 L 51 36 L 68 59 L 58 72 Z"
+      fill="#ffffff"
+    />
+    <!-- Bottom section of stem (clean severed tracker tail) -->
+    <path
+      d="M 69 74 L 79 87 L 91 87 L 76 67 Z"
+      fill="#ffffff"
+    />
+
+    <!-- Right-to-Left Crossing Stem (Crisp Light Metallic) -->
+    <path
+      d="M 77 36 L 91 36 L 37 87 L 23 87 Z"
+      fill="#f8fafc"
+      opacity="0.95"
+    />
+
+    <!-- Secondary highlight mimicking official X double-line -->
+    <path
+      d="M 40 37 L 46 37 L 85 86 L 79 86 Z"
+      fill="#38bdf8"
+      opacity="0.25"
+    />
+  </g>
+
+  <!-- 3. Untrack Telemetry Stripper Slash / Blade -->
+  <!-- Diagonal razor blade severing tracking tokens at bottom-right -->
+  <path
+    d="M 52 82 L 86 48 L 91 53 L 57 87 Z"
+    fill="url(#cleanBlade)"
+    filter="url(#bladeGlow)"
+  />
+
+  <!-- Severed Tracking Parameter Node (?s=...&t=...) -->
+  <!-- Red stripped indicator dot fading away -->
+  <circle cx="95" cy="85" r="4" fill="#ef4444" opacity="0.85" />
+  <line x1="90" y1="90" x2="100" y2="80" stroke="#f87171" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Clean Privacy Shield Sparkle / Check -->
+  <path
+    d="M 64 100 L 61 93 L 54 90 L 61 87 L 64 80 L 67 87 L 74 90 L 67 93 Z"
+    fill="#38bdf8"
+    opacity="0.9"
+  />
+</svg>

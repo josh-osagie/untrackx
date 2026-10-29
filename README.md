@@ -1,4 +1,4 @@
-# UntrackX
+# <img src="public/icons/logo.svg" width="32" height="32" align="center" alt="UntrackX Logo" /> UntrackX
 
 Manifest V3 Chrome extension that automatically removes user attribution, sharing telemetry, and analytics trackers (`a=`, `s=`, `t=`, `ref_src=`, etc.) from X (Twitter) URLs.
 

@@ -39,20 +39,15 @@ body {
 .logo-wrap {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.badge {
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(135deg, #0284c7, #2563eb);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 12px;
-  color: #fff;
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 2px 6px rgba(56, 189, 248, 0.35));
+  flex-shrink: 0;
+  border-radius: 4px;
 }
 
 .header h2 {
