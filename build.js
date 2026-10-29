@@ -6,7 +6,7 @@ async function main() {
   console.log('Building UntrackX Extension...\n');
 
   // 1. Build Popup via Vite (processes HTML, CSS, assets & copies public/manifest.json)
-  console.log('[1/3] Building Popup & Assets with Vite...');
+  console.log('[1/4] Building Popup & Assets with Vite...');
   await viteBuild({
     configFile: false,
     publicDir: 'public',
@@ -26,25 +26,37 @@ async function main() {
   });
 
   // 2. Build Background Service Worker (ES Module format for MV3)
-  console.log('\n[2/3] Bundling Background Service Worker...');
+  console.log('\n[2/4] Bundling Background Service Worker...');
   await esbuild({
     entryPoints: ['src/background.ts'],
     outfile: 'dist/background.js',
     bundle: true,
     format: 'esm',
-    target: 'chrome110',
+    target: 'chrome111',
     sourcemap: false,
     minify: false
   });
 
-  // 3. Build Content Script (IIFE format - isolated without external imports)
-  console.log('\n[3/3] Bundling Content Script (IIFE)...');
+  // 3. Build Content Script (IIFE format - runs in ISOLATED world)
+  console.log('\n[3/4] Bundling Content Script (IIFE)...');
   await esbuild({
     entryPoints: ['src/content.ts'],
     outfile: 'dist/content.js',
     bundle: true,
     format: 'iife',
-    target: 'chrome110',
+    target: 'chrome111',
+    sourcemap: false,
+    minify: false
+  });
+
+  // 4. Build Interceptor Script (IIFE format - runs in MAIN world)
+  console.log('\n[4/4] Bundling Interceptor Script (IIFE)...');
+  await esbuild({
+    entryPoints: ['src/interceptor.ts'],
+    outfile: 'dist/interceptor.js',
+    bundle: true,
+    format: 'iife',
+    target: 'chrome111',
     sourcemap: false,
     minify: false
   });
