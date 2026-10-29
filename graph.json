@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "targetDir": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src",
+    "projectName": "src",
+    "isReactProject": false,
+    "signals": [],
+    "notice": "No React components, JSX, hooks, or entry files detected. This folder may not be a React app - try pointing at src/ or a package that uses React.",
+    "entryNodeIds": [
+      "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\background.ts::background",
+      "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\content.ts::content",
+      "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\popup\\popup.ts::popup"
+    ],
+    "analyzedAt": "2026-10-29T14:31:30.019Z",
+    "insights": []
+  },
+  "nodes": [
+    {
+      "id": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.ts::cleanTwitterUrl",
+      "name": "cleanTwitterUrl",
+      "file": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.ts",
+      "type": "utility",
+      "exportKind": "named",
+      "kind": "FunctionDeclaration",
+      "stats": {
+        "incoming": 3,
+        "outgoing": 0
+      },
+      "layout": {
+        "x": 404,
+        "y": 262
+      }
+    },
+    {
+      "id": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.ts::cleanTextPayload",
+      "name": "cleanTextPayload",
+      "file": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.ts",
+      "type": "utility",
+      "exportKind": "named",
+      "kind": "FunctionDeclaration",
+      "stats": {
+        "incoming": 2,
+        "outgoing": 0
+      },
+      "layout": {
+        "x": 803,
+        "y": 262
+      }
+    },
+    {
+      "id": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\background.ts::background",
+      "name": "background",
+      "file": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\background.ts",
+      "type": "utility",
+      "stats": {
+        "incoming": 0,
+        "outgoing": 1
+      },
+      "layout": {
+        "x": 404,
+        "y": 84
+      }
+    },
+    {
+      "id": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.test.ts::cleaner.test",
+      "name": "cleaner.test",
+      "file": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.test.ts",
+      "type": "utility",
+      "stats": {
+        "incoming": 0,
+        "outgoing": 2
+      },
+      "layout": {
+        "x": 670,
+        "y": 84
+      }
+    },
+    {
+      "id": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\content.ts::content",
+      "name": "content",
+      "file": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\content.ts",
+      "type": "utility",
+      "stats": {
+        "incoming": 0,
+        "outgoing": 1
+      },
+      "layout": {
+        "x": 936,
+        "y": 84
+      }
+    },
+    {
+      "id": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\popup\\popup.ts::popup",
+      "name": "popup",
+      "file": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\popup\\popup.ts",
+      "type": "utility",
+      "stats": {
+        "incoming": 0,
+        "outgoing": 1
+      },
+      "layout": {
+        "x": 138,
+        "y": 84
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\background.ts::background",
+      "to": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.ts::cleanTwitterUrl",
+      "type": "imports"
+    },
+    {
+      "from": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.test.ts::cleaner.test",
+      "to": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.ts::cleanTwitterUrl",
+      "type": "imports"
+    },
+    {
+      "from": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.test.ts::cleaner.test",
+      "to": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.ts::cleanTextPayload",
+      "type": "imports"
+    },
+    {
+      "from": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\content.ts::content",
+      "to": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.ts::cleanTextPayload",
+      "type": "imports"
+    },
+    {
+      "from": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\popup\\popup.ts::popup",
+      "to": "C:\\Users\\Joshua Osagie\\projects\\untrackx\\src\\cleaner.ts::cleanTwitterUrl",
+      "type": "imports"
+    }
+  ]
+}

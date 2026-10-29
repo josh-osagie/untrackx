@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UntrackX</title>
+  <link rel="stylesheet" href="/src/popup/popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo-wrap">
+        <div class="badge">✕</div>
+        <h2>UntrackX</h2>
+      </div>
+      <span class="version">v1.0.0</span>
+    </header>
+
+    <section class="stat-card">
+      <div class="stat-label">Links Sanitized</div>
+      <div class="stat-value" id="cleaned-count">0</div>
+      <div class="stat-sub">Tracking telemetry stripped silently</div>
+    </section>
+
+    <section class="tester-card">
+      <label for="url-input" class="label">Test URL Sanitizer</label>
+      <input type="text" id="url-input" placeholder="Paste an x.com link..." spellcheck="false" autocomplete="off" />
+      <div id="output-box" class="output-box hidden">
+        <div class="output-text" id="output-text"></div>
+        <button id="copy-btn" class="btn btn-secondary">Copy Clean</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Auto-active on x.com &amp; context menu</span>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/popup/popup.ts"></script>
+</body>
+</html>
