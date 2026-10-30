@@ -20,6 +20,12 @@ describe('cleanTwitterUrl', () => {
     expect(cleanTwitterUrl(input)).toBe(expected);
   });
 
+   it('preserves legitimate search params while stripping trackers', () => {
+    const input = 'https://twitter.com/search?q=typescript&s=20&f=live';
+    const expected = 'https://twitter.com/search?q=typescript&f=live';
+    expect(cleanTwitterUrl(input)).toBe(expected);
+  });
+
   it('ignores non-X URLs', () => {
     const input = 'https://github.com/microsoft/typescript?s=20';
     expect(cleanTwitterUrl(input)).toBe(input);
